@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Minha Lista</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Minha Lista</h1>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Item</h2>
+
+      <label for="nome">Nome</label>
+      <input id="nome" type="text" autocomplete="off" placeholder="Ex.: O Hobbit">
+
+      <label for="tipo">Tipo</label>
+      <select id="tipo">
+        <option>Livro</option>
+        <option>Filme</option>
+        <option>Série</option>
+        <option>Jogo</option>
+        <option>Música</option>
+        <option>Outro</option>
+      </select>
+
+      <label for="arquivo">Imagem</label>
+      <div class="preview" id="preview">Sem imagem</div>
+      <input id="arquivo" type="file" accept=".jpg,.jpeg,.png,.gif">
+
+      <div class="botoes">
+        <button id="btnCadastrar" type="button">Cadastrar</button>
+        <button id="btnEditar" type="button">Editar</button>
+        <button id="btnExcluir" type="button" class="perigo">Excluir</button>
+        <button id="btnLimpar" type="button" class="secundario">Limpar</button>
+      </div>
+
+      <p id="aviso" role="status"></p>
+    </section>
+
+    <section class="card">
+      <h2>Itens</h2>
+      <div class="tabela-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Foto</th>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>Tipo</th>
+            </tr>
+          </thead>
+          <tbody id="corpo"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
